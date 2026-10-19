@@ -49,6 +49,16 @@ Each step compares the change in power (ΔP) with the change in voltage (ΔU) an
 | Buck-boost output at D = 0.5 | 31.8 V |
 | Load | 4 kΩ → 7.96 mA, 0.25 W |
 
+## Simulink models
+
+Built in MATLAB R2024b. Open in Simulink and press Run.
+
+| File | What it is |
+|---|---|
+| [`simulink/AC_DC_CONVERTOR.slx`](simulink/AC_DC_CONVERTOR.slx) | Stage 1: piezo mass–spring–damper source and PWM full-wave rectifier with its pulse controller |
+| [`simulink/Closed_loop_buck_boost_test.slx`](simulink/Closed_loop_buck_boost_test.slx) | Stage 2: buck-boost converter with the P&O MPPT block and discrete PID voltage loop |
+| [`simulink/title4.slx`](simulink/title4.slx) | Full integrated system: harvester → rectifier → MPPT-controlled buck-boost → load |
+
 ## Takeaways and next steps
 
 - The harvester is far more effective at higher vibration frequencies. Tuning fₙ toward the dominant source frequency is the biggest lever for efficiency.
